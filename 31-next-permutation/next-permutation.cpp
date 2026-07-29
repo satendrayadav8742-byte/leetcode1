@@ -16,7 +16,8 @@ public:
                 p2--;
             }
         }
-         if (p2 >= 0) {
+        if (p2 >= 0)
+        {
             int i = n - 1;
 
             while (nums[i] <= nums[p2]) {
