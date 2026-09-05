@@ -5,15 +5,17 @@ public:
         int time=0;
         for(int i=0;i<tickets.size();i++)
         {
-            q.push(i);
-        }
-        while(tickets[k]!=0)
-        {
-            tickets[q.front()]--;
-            if(tickets[q.front()])
-             q.push(q.front());
-             q.pop();
-            time++;
+            if(i<=k)
+            {
+                time+=min(tickets[k],tickets[i]);
+
+            }
+            else
+            {
+                time+=min(tickets[k]-1,tickets[i]);
+            }
+
+            
         }
         return time;
         
